@@ -1,2 +1,4 @@
 # ShotAvoiderGame
-Basic video game created using Processing
+Basic video game created using Processing(https://processing.org/) for the "Code week" initiative of the EU
+
+
