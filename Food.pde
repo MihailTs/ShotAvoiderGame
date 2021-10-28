@@ -20,7 +20,7 @@ class Food extends Walker{
     if(t <= 45) type = 1;
     else if(t <= 47) type = 2;
     else if(t <= 49) type = 3;
-    else type = 3;
+    else type = 4;
   }
   
   @Override
@@ -37,7 +37,7 @@ class Food extends Walker{
    }
    else {
      PImage img = loadImage("heart.png");
-     image(img, (x)*step+5, (y)*step+5);
+     image(img, (x)*step+5, (y)*step+8);
    }
   }
 
