@@ -33,7 +33,7 @@ class Food extends Walker{
      image(img, (x)*step+7, (y)*step+5);}
    else if(type == 3){
      PImage img = loadImage("x2.png");
-     image(img, (x)*step+5, (y)*step+8);
+     image(img, (x)*step+5, (y)*step+5);
    }
    else {
      PImage img = loadImage("heart.png");
