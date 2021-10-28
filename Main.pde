@@ -5,7 +5,7 @@ Food food;
 Canon leftCanon, rightCanon;
 
 int score = 0; int bestScore = 0;
-int x2Count = -1; int shieldCount = -1;
+int x2Count = -1; int shieldCount = -1; int heartCount = -1;
 
 void setup(){
   size(720, 880);
@@ -31,6 +31,8 @@ void draw(){
   score();
   hearts();
   //
+  
+  if(heartCount != -1) heartCount--;
   
   //Check if the shield and x2 are working
   shieldCount--;
@@ -64,11 +66,11 @@ void draw(){
   
   for(Shot shot: leftCanon.shots)
     if(round(shot.x) == walker.x && shot.y == walker.y){
-       if(!walker.shield) walker.hearts--; 
+       if(!walker.shield && heartCount == -1) {walker.hearts--;  heartCount = round(frameRate);}
     }
   for(Shot shot: rightCanon.shots)
     if(round(shot.x) == walker.x && shot.y == walker.y){
-       if(!walker.shield) walker.hearts--; 
+       if(!walker.shield && heartCount == -1) {walker.hearts--;  heartCount = round(frameRate);}
     }
 
   }
